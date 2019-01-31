@@ -1,22 +1,17 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-
-import styles from './styles.css'
-
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  }
-
-  render() {
-    const {
-      text
-    } = this.props
-
-    return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
-    )
-  }
-}
+export { default as Box } from './Box'
+export { default as Avatar } from './Avatar'
+export { default as Badge } from './Badge'
+export { default as Button } from './ButtonNested'
+export { default as Card } from './CardNested'
+export { default as Icon } from './Icon'
+export { default as Label } from './Label'
+export { default as Image } from './Image'
+export { default as Link } from './Link'
+export { default as SearchField } from './SearchField'
+export { default as SelectList } from './SelectList'
+export { default as SimpleCard } from './SimpleCard'
+export { default as Spinner } from './Spinner'
+export { default as Table } from './Table'
+export { default as Text } from './Text'
+export { default as TextField } from './TextField'
+export { default as Toast } from './Toast'

@@ -1,0 +1,35 @@
+.container {
+  composes: absolute from "./Layout.module.css";
+}
+
+.contents {
+  composes: absolute from "./Layout.module.css";
+  composes: block from "./Layout.module.css";
+  composes: borderBox from "./Layout.module.css";
+  composes: rounded from "./Borders.module.css";
+  border: 1px solid currentColor;
+}
+
+.contents:focus {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.18);
+  outline: none;
+}
+
+.dimensions {
+  max-height: 90vh;
+  max-width: 90vw;
+  min-height: 40px;
+}
+
+.innerContents {
+  composes: flex from "./Layout.module.css";
+  composes: overflowAuto from "./Layout.module.css";
+  composes: rounded from "./Borders.module.css";
+}
+
+.caret {
+  composes: absolute from "./Layout.module.css";
+  fill: currentColor;
+  height: 24px;
+  pointer-events: none;
+}

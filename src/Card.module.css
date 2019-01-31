@@ -1,0 +1,49 @@
+.card {
+  composes: absolute from "./Layout.module.css";
+  composes: rounded from "./Borders.module.css";
+  composes: top0 right0 bottom0 left0 contentBox from "./Layout.module.css";
+  background: rgba(0, 0, 0, 0.064);
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+}
+
+.cardExpanded{
+  background: rgba(0, 0, 0, 0.064);
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+}
+
+.bordered{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.hover {
+  animation: animateIn 0.2s cubic-bezier(0.31, 1, 0.34, 1) forwards;
+}
+
+@keyframes animateIn {
+  to {
+    opacity: 1;
+    padding: 8px;
+    transform: translateY(-8px) translateX(-8px);
+  }
+}
+
+.highlightLeft{
+  border-left: 6px solid #50a789;
+}
+
+.highlightRight{
+  border-right: 6px solid #50a789;
+}
+.highlightTop{
+  border-top: 6px solid #50a789;
+}
+.highlightBottom{
+  border-bottom: 6px solid #50a789;
+}

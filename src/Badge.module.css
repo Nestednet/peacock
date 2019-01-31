@@ -1,0 +1,32 @@
+.badge {
+    padding: 6px 10px;
+}
+
+.pill {
+    border-radius: 500px;
+}
+
+.rounded-rectangle {
+    border-radius: 4px;
+}
+
+.warning {
+    background: #F9ECC9;
+    color:  #62321F;
+}
+
+.alarm {
+    background: #FEE0E0;
+    color: #6E2425;
+}
+
+.good {
+    background:  #D5EDE9;;
+    color: #138771;
+}
+
+.info {
+    background: #E8E8E8;
+    color: #45575B;
+}
+

@@ -1,0 +1,384 @@
+.box {
+  composes: accessibilityOutline from "./Focus.module.css";
+  composes: borderBox from "./Layout.module.css";
+}
+
+/* Display */
+
+.xsDisplayNone {
+  display: none;
+}
+
+.xsDisplayFlex {
+  display: flex;
+  flex-direction: row;
+}
+
+.xsDisplayBlock {
+  display: block;
+}
+
+.xsDisplayInlineBlock {
+  display: inline-block;
+}
+
+.xsDisplayVisuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media (--sm) {
+  .smDisplayNone {
+    display: none;
+  }
+
+  .smDisplayFlex {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .smDisplayBlock {
+    display: block;
+  }
+
+  .smDisplayInlineBlock {
+    display: inline-block;
+  }
+
+  .smDisplayVisuallyHidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+
+@media (--md) {
+  .mdDisplayNone {
+    display: none;
+  }
+
+  .mdDisplayFlex {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .mdDisplayBlock {
+    display: block;
+  }
+
+  .mdDisplayInlineBlock {
+    display: inline-block;
+  }
+
+  .mdDisplayVisuallyHidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+
+@media (--lg) {
+  .lgDisplayNone {
+    display: none;
+  }
+
+  .lgDisplayFlex {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .lgDisplayBlock {
+    display: block;
+  }
+
+  .lgDisplayInlineBlock {
+    display: inline-block;
+  }
+
+  .lgDisplayVisuallyHidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+
+/* Direction */
+
+.xsDirectionRow {
+  flex-direction: row;
+}
+
+.xsDirectionColumn {
+  flex-direction: column;
+}
+
+@media (--sm) {
+  .smDirectionRow {
+    flex-direction: row;
+  }
+
+  .smDirectionColumn {
+    flex-direction: column;
+  }
+}
+
+@media (--md) {
+  .mdDirectionRow {
+    flex-direction: row;
+  }
+
+  .mdDirectionColumn {
+    flex-direction: column;
+  }
+}
+
+@media (--lg) {
+  .lgDirectionRow {
+    flex-direction: row;
+  }
+
+  .lgDirectionColumn {
+    flex-direction: column;
+  }
+}
+
+/* Column */
+
+.xsCol0 {
+  width: 0;
+}
+
+.xsCol1 {
+  composes: xsCol1 from "./Column.module.css";
+}
+
+.xsCol2 {
+  composes: xsCol2 from "./Column.module.css";
+}
+
+.xsCol3 {
+  composes: xsCol3 from "./Column.module.css";
+}
+
+.xsCol4 {
+  composes: xsCol4 from "./Column.module.css";
+}
+
+.xsCol5 {
+  composes: xsCol5 from "./Column.module.css";
+}
+
+.xsCol6 {
+  composes: xsCol6 from "./Column.module.css";
+}
+
+.xsCol7 {
+  composes: xsCol7 from "./Column.module.css";
+}
+
+.xsCol8 {
+  composes: xsCol8 from "./Column.module.css";
+}
+
+.xsCol9 {
+  composes: xsCol9 from "./Column.module.css";
+}
+
+.xsCol10 {
+  composes: xsCol10 from "./Column.module.css";
+}
+
+.xsCol11 {
+  composes: xsCol11 from "./Column.module.css";
+}
+
+.xsCol12 {
+  composes: xsCol12 from "./Column.module.css";
+}
+
+@media (--sm) {
+  .smCol0 {
+    width: 0;
+  }
+
+  .smCol1 {
+    composes: smCol1 from "./Column.module.css";
+  }
+
+  .smCol2 {
+    composes: smCol2 from "./Column.module.css";
+  }
+
+  .smCol3 {
+    composes: smCol3 from "./Column.module.css";
+  }
+
+  .smCol4 {
+    composes: smCol4 from "./Column.module.css";
+  }
+
+  .smCol5 {
+    composes: smCol5 from "./Column.module.css";
+  }
+
+  .smCol6 {
+    composes: smCol6 from "./Column.module.css";
+  }
+
+  .smCol7 {
+    composes: smCol7 from "./Column.module.css";
+  }
+
+  .smCol8 {
+    composes: smCol8 from "./Column.module.css";
+  }
+
+  .smCol9 {
+    composes: smCol9 from "./Column.module.css";
+  }
+
+  .smCol10 {
+    composes: smCol10 from "./Column.module.css";
+  }
+
+  .smCol11 {
+    composes: smCol11 from "./Column.module.css";
+  }
+
+  .smCol12 {
+    composes: smCol12 from "./Column.module.css";
+  }
+}
+
+@media (--md) {
+  .mdCol0 {
+    width: 0;
+  }
+
+  .mdCol1 {
+    composes: mdCol1 from "./Column.module.css";
+  }
+
+  .mdCol2 {
+    composes: mdCol2 from "./Column.module.css";
+  }
+
+  .mdCol3 {
+    composes: mdCol3 from "./Column.module.css";
+  }
+
+  .mdCol4 {
+    composes: mdCol4 from "./Column.module.css";
+  }
+
+  .mdCol5 {
+    composes: mdCol5 from "./Column.module.css";
+  }
+
+  .mdCol6 {
+    composes: mdCol6 from "./Column.module.css";
+  }
+
+  .mdCol7 {
+    composes: mdCol7 from "./Column.module.css";
+  }
+
+  .mdCol8 {
+    composes: mdCol8 from "./Column.module.css";
+  }
+
+  .mdCol9 {
+    composes: mdCol9 from "./Column.module.css";
+  }
+
+  .mdCol10 {
+    composes: mdCol10 from "./Column.module.css";
+  }
+
+  .mdCol11 {
+    composes: mdCol11 from "./Column.module.css";
+  }
+
+  .mdCol12 {
+    composes: mdCol12 from "./Column.module.css";
+  }
+}
+
+@media (--lg) {
+  .lgCol0 {
+    width: 0;
+  }
+
+  .lgCol1 {
+    composes: lgCol1 from "./Column.module.css";
+  }
+
+  .lgCol2 {
+    composes: lgCol2 from "./Column.module.css";
+  }
+
+  .lgCol3 {
+    composes: lgCol3 from "./Column.module.css";
+  }
+
+  .lgCol4 {
+    composes: lgCol4 from "./Column.module.css";
+  }
+
+  .lgCol5 {
+    composes: lgCol5 from "./Column.module.css";
+  }
+
+  .lgCol6 {
+    composes: lgCol6 from "./Column.module.css";
+  }
+
+  .lgCol7 {
+    composes: lgCol7 from "./Column.module.css";
+  }
+
+  .lgCol8 {
+    composes: lgCol8 from "./Column.module.css";
+  }
+
+  .lgCol9 {
+    composes: lgCol9 from "./Column.module.css";
+  }
+
+  .lgCol10 {
+    composes: lgCol10 from "./Column.module.css";
+  }
+
+  .lgCol11 {
+    composes: lgCol11 from "./Column.module.css";
+  }
+
+  .lgCol12 {
+    composes: lgCol12 from "./Column.module.css";
+  }
+}
+
+.shadowed{
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.17);
+}

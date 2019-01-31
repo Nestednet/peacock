@@ -1,0 +1,104 @@
+
+.shadow{
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.booking_requests_transactions.\__hidden {
+    display: none;
+  }
+  
+  .booking_requests_transactions.guest {
+    background: #FFFFFF;
+    -webkit-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 18px;
+  }
+  
+  .booking_requests_transactions > div {
+    width: 100%;
+  }
+  
+  .booking_requests_transactions > div > div {
+    padding: 0px 24px;
+  }
+  
+  @media only screen and (min-width: 0) and (max-width: 767px) {
+    .booking_requests_transactions > div > div {
+      padding: 0px 3%;
+    }
+  }
+  
+  .booking_requests_transactions .transactions_table__header {
+    background-color: #F4F7FA;
+    height: 36px;
+  }
+  
+  .booking_requests_transactions .transactions_table__header > div {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #4A586B;
+  }
+  
+  .booking_requests_transactions .transactions_table__row:not(:last-child) {
+    border-bottom: 1px solid #EBEBEB;
+  }
+  
+  .booking_requests_transactions .transactions_table__row > div {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  
+  .booking_requests_transactions .transactions_table__row .date {
+    font-size: 12px;
+    color: #989E9F;
+  }
+  
+  .booking_requests_transactions .transactions_table__row .concept {
+    font-size: 12px;
+  }
+  
+  .booking_requests_transactions .transactions_table__row .amount {
+    font-size: 12px;
+    color: #00bf99;
+  }
+  
+  .booking_requests_transactions .transactions_table__row .status > div {
+    display: inline-block;
+    border-radius: 14px;
+  }
+  
+  .booking_requests_transactions .transactions_table__row .status > div > div {
+    position: relative;
+    top: -2px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1%;
+    text-transform: capitalize;
+    padding: 0px 10px;
+  }
+  
+  .booking_requests_transactions .transactions_table__row .status.\__pending > div {
+    background-color: #f9ecc9;
+  }
+  
+  .booking_requests_transactions .transactions_table__row .status.\__pending > div > span {
+    color: #62321F;
+  }
+  
+  .booking_requests_transactions .transactions_table__row .status.\__succeeded > div {
+    background-color: #D5EDE9;
+  }
+  
+  .booking_requests_transactions .transactions_table__row .status.\__succeeded > div > span {
+    color: #138771;
+  }
+  
+  .booking_requests_transactions .transactions_table__row .status.\__started > div {
+    background-color: #F4F7FA;
+  }
+  
+  .booking_requests_transactions .transactions_table__row .status.\__started > div > span {
+    color: #4A586B;
+  }
+  

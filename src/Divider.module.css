@@ -1,0 +1,7 @@
+.divider {
+  composes: block from "./Layout.module.css";
+  composes: borderTop from "./Borders.module.css";
+  composes: m0 from "./Whitespace.module.css";
+  border-bottom: 0;
+  border-left: 0;
+}

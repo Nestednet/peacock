@@ -1,0 +1,91 @@
+.booking_requests-transactions{
+    &.--hidden {
+        display: none;
+    }
+    &.guest {
+        background: #FFFFFF;
+        box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.10);
+        border-radius: 8px;
+        margin-top: 18px;
+    }
+    >table {
+        width: 100%;
+        th {
+            padding: 0px 24px;
+            @media #{$small-only} {
+                padding: 0px 3%;
+            }
+        }
+    }
+    .transactions-table {
+        &--header {
+            background-color: #F4F7FA;
+            height: 36px;
+            >th {
+                font-size: 12px;
+                text-transform: uppercase;
+                font-weight: 400;
+                color: #4A586B;
+            }
+        }
+        &--row {
+            &:not(:last-child){
+                border-bottom: 1px solid #EBEBEB;
+            }
+            >th {
+                padding-top: 8px;
+                padding-bottom: 8px;
+            }
+            .date {
+                font-size: 12px;
+                color: #989E9F;
+            }
+            .concept {
+                font-size: 12px;
+            }
+            .amount {
+                font-size: 12px;
+                color: $color-nested;
+            }
+            .status {
+                >div {
+                    display: inline-block;
+                    border-radius: 14px;
+                    >span {
+                        position: relative;
+                        top: -2px;
+                        font-size: 10px;
+                        font-weight: 600;
+                        letter-spacing: 1%;
+                        text-transform: capitalize;
+                        padding: 0px 10px;
+                    }
+                }
+                &.--pending {
+                    >div {
+                        background-color: #f9ecc9;
+                        >span {
+                            color: #62321F;
+                        }
+                    }
+                }
+                &.--succeeded {
+                    >div {
+                        background-color: #D5EDE9;
+                        >span {
+                            color: #138771;
+                        }
+                    }
+                }
+                &.--started {
+                    >div {
+                        background-color: #F4F7FA;
+                        >span {
+                            color: #4A586B;
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 

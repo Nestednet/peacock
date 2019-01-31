@@ -1,0 +1,15 @@
+:root {
+  --lightGray: #efefef;
+}
+
+.button {
+  composes: block from "./Layout.module.css";
+  composes: noBorder from "./Borders.module.css";
+  composes: p0 from "./Whitespace.module.css";
+  composes: pointer from "./Cursor.module.css";
+  background: transparent;
+}
+
+.button:focus {
+  outline: 0;
+}

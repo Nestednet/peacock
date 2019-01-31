@@ -1,0 +1,48 @@
+@keyframes spin {
+  from {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  
+  width: 60px;
+  height: 60px;
+  margin: 0px -30px 0px -30px;
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  transform-origin: 38.5px 38.5px;
+  /*
+  animation-delay: 0.3s;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-name: spin;
+  animation-timing-function: linear;
+  opacity: 0;*/
+}
+
+.dot{
+  width: 8.571428571428571px;
+  height: 8.571428571428571px;
+  border-radius: 100%;
+  background-color: #4daf7c;
+  opacity: 0.8;
+  position: absolute;
+  top: 25.714285714285715px;
+}
+
+.circle{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 8.571428571428571px solid #4daf7c;
+  opacity: 0.1;
+}
+
