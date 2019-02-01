@@ -10,7 +10,7 @@ type Props = {|
     accessibilityExpanded?: boolean,
     accessibilityHaspopup?: boolean,
     accessibilityLabel?: string,
-    color?: 'green', //TODO: assignar als colors de nested
+    color?: 'green', // TODO: assignar als colors de nested
     disabled?: boolean,
     inline?: boolean,
     name?: string,
@@ -62,10 +62,10 @@ export default function Button(props: Props) {
         [styles.block]: !inline,
         [styles.pill]: isPill,
     });
-    
+
 
     return(
-        <button 
+        <button
             aria-expanded = {accessibilityExpanded}
             aria-haspopup = {accessibilityHaspopup}
             aria-label = {accessibilityLabel}
@@ -73,22 +73,22 @@ export default function Button(props: Props) {
             disabled = {disabled}
             name = {name}
             onClick = {event => onClick && onClick({ event })}
-            type={type}    
+            type={type}
         >
-            {buttonIcon && 
+            {buttonIcon &&
                 <Box
                     position="relative"
                     display = "flex"
                     direction = "row"
                     alignItems = "center"
                 >
-                    <Icon icon={buttonIcon} accessibilityLabel={buttonIcon} color={disabled ? 'gray' : textColor[color]} /> 
+                    <Icon icon={buttonIcon} accessibilityLabel={buttonIcon} color={disabled ? 'gray' : textColor[color]} />
                     <Text align = "center" color={disabled ? 'gray' : textColor[color]} overflow = "normal" size={size} >
                         {text}
                     </Text>
-                    
+
                 </Box>
-                              
+
             }
             {!buttonIcon &&
                 <Text
@@ -99,7 +99,7 @@ export default function Button(props: Props) {
                 >
                     {text}
                 </Text>
-            
+
             }
 
         </button>
@@ -110,7 +110,7 @@ export default function Button(props: Props) {
 Button.propTypes = {
     accessibilityExpanded: PropTypes.bool,
     accessibilityHaspopup: PropTypes.bool,
-    accessibilityLable: PropTypes.string, 
+    accessibilityLable: PropTypes.string,
     color: PropTypes.oneOf(['blue', 'gray', 'red', 'transparent', 'white', 'green']),
     disabled: PropTypes.bool,
     inline: PropTypes.bool,

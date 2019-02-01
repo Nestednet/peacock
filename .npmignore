@@ -2,5 +2,7 @@ src/
 test/
 .npmignore
 .babelrc
+.storybook
+.vscode
 rollup.config.js
 example/

@@ -15,13 +15,13 @@ import Button from '../Button';
 class SpinnerExample extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state={
       show: false
     };
-    this.handleClick = this._handleClick.bind(this);
+    this.handleClick=this._handleClick.bind(this);
   }
   _handleClick() {
-    this.setState(prevState => ({
+    this.setState(prevState () => ({
       ...prevState,
       show: !prevState.show
     }));
@@ -32,17 +32,17 @@ class SpinnerExample extends React.Component {
         <Box paddingY={2}>
           <Button
             inline
-            text={!this.state.show ? "Show spinner" : "Hide spinner"}
+            text={!this.state.show ? 'Show spinner' : 'Hide spinner'}
             onClick={this.handleClick}
-            size="md"
+            size='md'
           />
         </Box>
-        <Spinner show={this.state.show} accessibilityLabel="Example spinner" />
+        <Spinner show={this.state.show} accessibilityLabel='Example spinner' />
       </Box>
     );
   }
 }
 
-storiesOf('Spinner').add("default",()=>
+storiesOf('Spinner').add('default',() =>
     <SpinnerExample></SpinnerExample>
 )

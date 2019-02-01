@@ -20,7 +20,6 @@ export default class Table extends React.Component<Props, State>{
 
     render(){
         const{columns, children} = this.props;
-        
         var columnSize = columns.length;
         var globalClass = classnames(
             styles.booking_requests_transactions,
@@ -32,26 +31,20 @@ export default class Table extends React.Component<Props, State>{
         var table__row = classnames(
             styles.transactions_table__row,
         );
-        
         const MAX = 12;
         var spanCol = 12 / columns.length; //TODO: afegir excepcions
         console.log("HEYYYY " + spanCol);
-        
         return(
             <Box className = {globalClass} col={12} >
                 <Box name = "th" display="flex" direction="row" paddingY={2} color={"darkGray"} shape={"roundedTop"}>
-                {columns.map((column, index) => 
-                    <Column span = {spanCol}>
+                {columns.map((column, index) =>                    <Column span = {spanCol}>
                         <Box name = "thr" height = {"100%"} color="white" paddingY={3} key = {column + index}>
                             <Text align="center">{column}</Text>
                         </Box>
                     </Column>
                 )}
                 </Box>
-                <Box name = "tb" paddingY={2} shape={"roundedBottom"} color = "lightGray"> 
-                {children.map((child, index) => 
-                    <Box name = "tbr"  className = {table__row} key = {table__row + index}> 
-                        {child}
+                <Box name = "tb" paddingY={2} shape={"roundedBottom"} color = "lightGray">                {children.map((child, index) =>                    <Box name = "tbr"  className = {table__row} key = {table__row + index}>                        {child}
                     </Box>
                 )}
                 </Box>
@@ -70,12 +63,8 @@ export default class Table extends React.Component<Props, State>{
                             </Box>
                         )}
                     </Box>
-                    
 
-                    
-                    {children.map((child, index) => 
-                        <Box name = "tr"  className = {table__row} key = {table__row + index}> 
-                            {child}
+                    {children.map((child, index) =>                        <Box name = "tr"  className = {table__row} key = {table__row + index}>                            {child}
                         </Box>
                     )}
                 </Box>

@@ -2,8 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Box from './Box.js';
-import styles from './Card.module.css'; 
-import Mask from './Mask.js';
+import styles from './Card.module.css';import Mask from './Mask.js';
 type Props = {|
   active?: ?boolean,
   children?: React.Node,
@@ -11,11 +10,9 @@ type Props = {|
   onMouseEnter?: ({ event: SyntheticMouseEvent<HTMLDivElement> }) => void,
   onMouseLeave?: ({ event: SyntheticMouseEvent<HTMLDivElement> }) => void,
 |};
-  
 type State = {|
   hovered: boolean,
 |};
-  
 export default class Card extends React.Component<Props, State> {
   static propTypes = {
     active: PropTypes.bool,
@@ -24,11 +21,9 @@ export default class Card extends React.Component<Props, State> {
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
   };
-  
   state: State = {
     hovered: false,
   };
-  
   handleMouseEnter = (event: SyntheticMouseEvent<HTMLDivElement>) => {
     const { onMouseEnter } = this.props;
     this.setState(
@@ -36,7 +31,6 @@ export default class Card extends React.Component<Props, State> {
       onMouseEnter && (() => onMouseEnter({ event }))
     );
   };
-  
   handleMouseLeave = (event: SyntheticMouseEvent<HTMLDivElement>) => {
     const { onMouseLeave } = this.props;
     this.setState(
@@ -44,7 +38,6 @@ export default class Card extends React.Component<Props, State> {
       onMouseLeave && (() => onMouseLeave({ event }))
     );
   };
-  
   render() {
     const { active, children, image } = this.props;
     const { hovered } = this.state;
@@ -64,7 +57,6 @@ export default class Card extends React.Component<Props, State> {
         <Mask height = {image.width} >
         {image && <Box marginBottom={1}>{image}</Box>}
         </Mask>
-        
         <Box>{children}</Box>
         <div className={classes} />
       </Box>

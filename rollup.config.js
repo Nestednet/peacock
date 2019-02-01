@@ -5,7 +5,8 @@ import postcss from 'rollup-plugin-postcss'
 import resolve from 'rollup-plugin-node-resolve'
 import url from 'rollup-plugin-url'
 import svgr from '@svgr/rollup'
-
+import uglify from 'rollup-plugin-uglify'
+import minify from 'rollup-plugin-minify-es'
 import pkg from './package.json'
 
 export default {
@@ -25,7 +26,9 @@ export default {
   plugins: [
     external(),
     postcss({
-      modules: true
+      modules: true,
+      minimize: true,
+      sourcemap: false
     }),
     url(),
     svgr(),
@@ -33,6 +36,8 @@ export default {
       exclude: 'node_modules/**',
       plugins: [ 'external-helpers', 'inline-react-svg' ]
     }),
+    uglify(),
+    minify(),
     resolve(),
     commonjs()
   ]

@@ -25,8 +25,6 @@ export default class CardNested extends React.Component<Props, State> {
 
     render() {
         const { src, highlight, title, description } = this.props;
-        
-        
         const classes = classnames(styles.card, {
             // If, like @chrislloyd, you can't remember Javascript equality rules,
             // == null checks for `null` or `undefined` and leaves out `false`.
@@ -40,19 +38,16 @@ export default class CardNested extends React.Component<Props, State> {
             position="relative"
             >
             <Image alt = {"nested"} naturalHeight = {1} naturalWidth={1} src = {src}></Image>
-            
             <Box>
             <Text align="center" bold size="xl">
                 <Box paddingX={3} paddingY={2}>
                  {title}
                 </Box>
-         
             </Text>
             <Text align = "center">{description}</Text>
             </Box>
             <div className={classes} />
-            </Box>    
-
+            </Box>
         );
     }
 }

@@ -35,7 +35,7 @@ export default function Badge({
         styles[shape],
         styles[status],
       );
-    
+
     const Tag = inline ? 'span' : 'div';
     return (
         <Tag className={classes}>{children}</Tag>

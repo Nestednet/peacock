@@ -30,7 +30,6 @@ export default class SimpleCard extends React.Component<Props, State> {
 
     render() {
         const { srcImage, highlight, title, description, inverted = false, avatar = false} = this.props;
-        
         const classes = classnames(styles.card, {
             // If, like @chrislloyd, you can't remember Javascript equality rules,
             // == null checks for `null` or `undefined` and leaves out `false`.
@@ -45,7 +44,6 @@ export default class SimpleCard extends React.Component<Props, State> {
         var display = avatar ? "flex" : "block";
         var direction = avatar ? "row" : "column";
         var align = (srcImage && !avatar) || (!srcImage) ? "center" : "";
-        
         return(
             <Box
                 onMouseEnter={this.handleMouseEnter}
@@ -56,7 +54,6 @@ export default class SimpleCard extends React.Component<Props, State> {
             >
                 {srcImage && avatar && <Avatar size="lg" src={srcImage} name="Keerthi" profile='user'/> }
                 {srcImage && !avatar && <Image alt = "nested" naturalHeight = {1} naturalWidth={1} src = {srcImage}></Image>}
-                
                 <Box>
                     {inverted && <Text align = {align} size="md"><Box paddingX={3}>{description}</Box></Text>}
                     <Text align={align} bold size="xl">
@@ -66,11 +63,7 @@ export default class SimpleCard extends React.Component<Props, State> {
                     {!inverted && <Text align = {align} size="md"><Box paddingX={3}>{description}</Box></Text>}
                 </Box>
                 <div className={classes} />
-            </Box>    
-            
-            
-        );
+            </Box>        );
 
-          
     }
 }

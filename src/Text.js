@@ -38,7 +38,6 @@ type Props = {|
     | 'red'
     | 'white'
     | 'nested_emph_color',
-    
   inline?: boolean,
   italic?: boolean,
   overflow?: 'normal' | 'breakWord',

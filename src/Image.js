@@ -2,8 +2,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Box from './Box.js';
-import styles from './Image.module.css'; 
-
+import styles from './Image.module.css';
 const shouldScaleImage = fit => fit === 'cover' || fit === 'contain';
 
 type Props = {|

@@ -19,13 +19,11 @@ export default class TableElement extends React.Component<Props, State>{
         } = this.props;
 
         var spanCol = children.length;
-        
         return(
 
             <Box name = "tr" display="flex" direction="row" paddingY={2} shape={"roundedTop"} justifyContent="between"
             alignItems="center" height={"100%"}>
-            {children.map((child, index) => 
-                <Column span = {spanCol} >
+            {children.map((child, index) =>                <Column span = {spanCol} >
                     <Box height = {"100%"} padding={1} key = {child.toString() + index} alignSelf ="center" alignContent="between">
                         {child}
                     </Box>
@@ -37,11 +35,7 @@ export default class TableElement extends React.Component<Props, State>{
 }
 
 /*
-            <Box 
-            position = "relative" 
-            display="flex" 
-            direction = "row" 
-            alignContent="center"
+            <Box            position = "relative"            display="flex"            direction = "row"            alignContent="center"
             alignItems="center"
             justifyContent="between"
             className = "transactions-table__row"

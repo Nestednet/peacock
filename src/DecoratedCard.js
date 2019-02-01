@@ -11,14 +11,14 @@ import Divider from './Divider.js';
 import Icon from './Icon.js';
 
 type Props = {|
-    avatar? : bool, 
+    avatar? : bool,
     bold? : bool,
     centered? : bool,
     children? : React.Node,
     description? : string,
     divider? : bool,
     highlight? : 'left' | 'right' | 'top' | 'bottom',
-    inverted? : boolean, 
+    inverted? : boolean,
     title? : string,
     titleColor? : string,
     srcImage? : string,
@@ -27,29 +27,24 @@ type Props = {|
 
 export default class DecoratedCard extends React.Component<Props, State> {
     static propTypes = {
-        srcImage  : PropTypes.string,
-        highlight  : PropTypes.oneOf(['left' , 'right' , 'top' , 'bottom']),
-        title  : PropTypes.string,
-        descriptino  : PropTypes.string,
-        inverted  : PropTypes.bool,
-        avatar  : PropTypes.bool, 
-        children : PropTypes.node,
-        titleColor : PropTypes.string,
-        subtitleColor : PropTypes.string,
-        centered : PropTypes.bool,
-        bold : PropTypes.bool, 
-        divider: PropTypes.bool, 
+      srcImage: PropTypes.string,
+      highlight: PropTypes.oneOf(['left' , 'right' , 'top' , 'bottom']),
+      title: PropTypes.string,
+      description: PropTypes.string,
+      inverted: PropTypes.bool,
+      avatar: PropTypes.bool,
+      children: PropTypes.node,
+      titleColor: PropTypes.string,
+      subtitleColor: PropTypes.string,
+      centered: PropTypes.bool,
+      bold: PropTypes.bool
     }
 
     render(){
         const {
-            srcImage, highlight, title, description, children, 
-            bold = false,
+            srcImage, highlight, title, description, children,            bold = false,
             centered = true,
-            inverted = false, 
-            avatar = false,  titleColor = "darkGray", subtitleColor = "gray"} = this.props;
-        
-        
+            inverted = false,            avatar = false,  titleColor = "darkGray", subtitleColor = "gray"} = this.props;
         const classes = classnames(styles.card, {
             // If, like @chrislloyd, you can't remember Javascript equality rules,
             // == null checks for `null` or `undefined` and leaves out `false`.
@@ -60,24 +55,19 @@ export default class DecoratedCard extends React.Component<Props, State> {
             [styles.hover]: true,
           });
 
-          var align = centered ? "center" : ""; 
-          
-          var lujo = "https://www.arqhys.com/wp-content/fotos/2011/07/Fotos-de-apartamentos-lujosos.jpg";
+          var align = centered ? "center" : "";          var lujo = "https://www.arqhys.com/wp-content/fotos/2011/07/Fotos-de-apartamentos-lujosos.jpg";
           if (!srcImage){
               return(
                 <Box width = {215} height = {240} position = "relative" >
-                    
                     <Mask width = {215} height = {140}>
                         <Image alt = "Luxury Nested" naturalWidth={1} naturalHeight = {1} src = {lujo}></Image>
                     </Mask>
-                    <Box shape="roundedLeft" color ="pine" maxWidth={70} position="absolute" right top marginY = {12}> 
-                        <Text bold color ="navy"> 11€/day</Text>
+                    <Box shape="roundedLeft" color ="pine" maxWidth={70} position="absolute" right top marginY = {12}>                        <Text bold color ="navy"> 11€/day</Text>
                     </Box>
                     <Box paddingX = {3}>
                         <Text size = "xs" bold>La mesa de Palaua init</Text>
                         <Text size = "xs">Horta, Barcelona</Text>
-                        <Box paddingY = {3} display = "flex" direction = "row"> 
-                            <Box display = "flex" direction = "row">
+                        <Box paddingY = {3} display = "flex" direction = "row">                            <Box display = "flex" direction = "row">
                                 <Icon size = {12} icon="pin" accessibilityLabel="Pin" color="darkGray"></Icon>
                                 <Text size = "xs">14 People</Text>
                             </Box>
@@ -86,13 +76,10 @@ export default class DecoratedCard extends React.Component<Props, State> {
                                 <Text size = "xs">Desk</Text>
                             </Box>
                         </Box>
-        
                     </Box>
                     <div className={classes} />
-                </Box>    
-              )
+                </Box>              )
           }
-          
 
           return(
             <Box
@@ -102,15 +89,13 @@ export default class DecoratedCard extends React.Component<Props, State> {
             display = "flex"
             direction = "row"
             >
-                { srcImage && 
-                     <Avatar
+                { srcImage &&                     <Avatar
                      size="lg"
                      src={srcImage}
                      name="Keerthi"
                      profile='company'
                      />
                 }
-                
                 <Box>
                     {inverted && <Text align = {align} size="sm" color = {subtitleColor}>{description}</Text>}
                     <Text align= {align} bold={bold} size="xl" color={titleColor}>
@@ -118,8 +103,7 @@ export default class DecoratedCard extends React.Component<Props, State> {
                         {title}
                         </Box>
                     </Text>
-                    {!inverted && 
-                        <Text align = {align} size="sm" color = {subtitleColor}>
+                    {!inverted &&                        <Text align = {align} size="sm" color = {subtitleColor}>
                             {!centered && <Box paddingX = {3}> {description}</Box> }
                             {centered && {description}}
                         </Text>}
@@ -129,7 +113,6 @@ export default class DecoratedCard extends React.Component<Props, State> {
 
                 </Box>
                 <div className={classes} />
-            </Box>    
-          );
+            </Box>          );
     }
 }
